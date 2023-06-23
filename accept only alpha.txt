@@ -1,0 +1,14 @@
+<input type="text" class="form-control" oninput="validateInput()" id="owner_name" />
+
+
+<script>
+    function validateInput() {
+        var inputField = document.getElementById("owner_name");
+        var inputValue = inputField.value;
+        var alphabetsRegex = /^[A-Za-z]+$/;
+
+        if (!inputValue.match(alphabetsRegex)) {
+            inputField.value = inputValue.replace(/[^A-Za-z]/g, '');
+        }
+    }
+</script>
